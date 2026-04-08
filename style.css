@@ -1,23 +1,23 @@
 :root {
-  --green-deep: #052e16;
-  --green-mid: #0f5132;
-  --green-card: #0a3d26;
-  --green-btn: #22c55e;
-  --green-btn-hover: #16a34a;
-  --green-text: #dcfce7;
-  --green-text-soft: #bbf7d0;
-  --green-line: rgba(74, 222, 128, 0.35);
-  --green-shadow: rgba(5, 46, 22, 0.55);
-  --green-overlay-dark: rgba(5, 46, 22, 0.55);
-  --green-overlay-mid: rgba(5, 46, 22, 0);
-  --green-logo-bg: #4ade80;
-  --green-logo-fg: #052e16;
+  --black-deep: #050505;
+  --black-mid: #141414;
+  --black-card: #0f0f0f;
+  --black-btn: #262626;
+  --black-btn-hover: #404040;
+  --black-text: #e5e5e5;
+  --black-text-soft: #a3a3a3;
+  --black-line: rgba(255, 255, 255, 0.12);
+  --black-shadow: rgba(0, 0, 0, 0.7);
+  --black-overlay-dark: rgba(0, 0, 0, 0.55);
+  --black-overlay-mid: rgba(0, 0, 0, 0);
+  --black-logo-bg: #1f1f1f;
+  --black-logo-fg: #f5f5f5;
 }
 
 body {
   overflow: hidden;
   font-family: "Roboto", serif;
-  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+  background: linear-gradient(135deg, var(--black-deep), var(--black-mid));
 }
 
 .carousel {
@@ -50,8 +50,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   transform-origin: 0% 100%;
-  box-shadow: 0 10px 50px 10px var(--green-shadow);
-  background: var(--green-card);
+  box-shadow: 0 10px 50px 10px var(--black-shadow);
+  background: var(--black-card);
   pointer-events: all;
   transform: translate(var(--x), var(--y)) rotate(var(--rot));
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -89,26 +89,26 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    var(--green-overlay-dark),
-    var(--green-overlay-mid) 30%,
-    var(--green-overlay-mid) 50%,
-    var(--green-overlay-dark)
+    var(--black-overlay-dark),
+    var(--black-overlay-mid) 30%,
+    var(--black-overlay-mid) 50%,
+    var(--black-overlay-dark)
   );
 }
 .carousel-item .title {
   position: absolute;
   z-index: 1;
-  color: var(--green-text);
+  color: var(--black-text);
   bottom: 20px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
   font-size: clamp(20px, 3vw, 30px);
-  text-shadow: 0 4px 12px var(--green-shadow);
+  text-shadow: 0 4px 12px var(--black-shadow);
 }
 .carousel-item .num {
   position: absolute;
   z-index: 1;
-  color: var(--green-text);
+  color: var(--black-text);
   top: 10px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -138,8 +138,8 @@ body {
 .response-btn {
   padding: 12px 24px;
   font-size: 18px;
-  background: var(--green-btn);
-  color: var(--green-deep);
+  background: var(--black-btn);
+  color: var(--black-text);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -150,7 +150,7 @@ body {
 }
 
 .response-btn:hover {
-  background: var(--green-btn-hover);
+  background: var(--black-btn-hover);
   transform: scale(1.1);
 }
 
@@ -171,7 +171,7 @@ body {
   left: 90px;
   width: 10px;
   height: 100%;
-  border: 1px solid var(--green-line);
+  border: 1px solid var(--black-line);
   border-top: none;
   border-bottom: none;
   opacity: 0.15;
@@ -180,7 +180,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 30px;
-  color: var(--green-text-soft);
+  color: var(--black-text-soft);
   transform-origin: 0% 10%;
   transform: rotate(-90deg);
   font-size: 9px;
@@ -196,7 +196,7 @@ body {
   right: 28px;
   width: 30px;
   height: 30px;
-  background: var(--green-logo-bg);
+  background: var(--black-logo-bg);
   border-radius: 50%;
   opacity: 0.85;
   display: flex;
@@ -204,7 +204,7 @@ body {
   align-items: center;
   font-family: "Orelo-sw-db", serif;
   pointer-events: all;
-  color: var(--green-logo-fg);
+  color: var(--black-logo-fg);
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
@@ -216,7 +216,7 @@ body {
   z-index: 10;
   bottom: 20px;
   right: 25px;
-  color: var(--green-text-soft);
+  color: var(--black-text-soft);
   opacity: 0.4;
 }
 .social a {
@@ -224,7 +224,7 @@ body {
   margin-left: 3px;
 }
 .social svg {
-  --fill: var(--green-text-soft);
+  --fill: var(--black-text-soft);
   width: 35px;
   height: 35px;
 }
@@ -238,7 +238,7 @@ body {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  border: 1px solid rgba(74, 222, 128, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
   transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
   display: none;
