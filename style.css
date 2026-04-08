@@ -1,23 +1,25 @@
 :root {
-  --black-deep: #050505;
-  --black-mid: #141414;
-  --black-card: #0f0f0f;
-  --black-btn: #262626;
-  --black-btn-hover: #404040;
-  --black-text: #e5e5e5;
-  --black-text-soft: #a3a3a3;
-  --black-line: rgba(255, 255, 255, 0.12);
-  --black-shadow: rgba(0, 0, 0, 0.7);
-  --black-overlay-dark: rgba(0, 0, 0, 0.55);
-  --black-overlay-mid: rgba(0, 0, 0, 0);
-  --black-logo-bg: #1f1f1f;
-  --black-logo-fg: #f5f5f5;
+  /* Monochrome scale: black → gray → white */
+  --mono-0: #070707;
+  --mono-1: #0f0f0f;
+  --mono-2: #1a1a1a;
+  --mono-3: #2e2e2e;
+  --mono-4: #454545;
+  --mono-5: #737373;
+  --mono-6: #a3a3a3;
+  --mono-7: #d4d4d4;
+  --mono-8: #ebebeb;
+  --mono-9: #f7f7f7;
+  --mono-line: rgba(255, 255, 255, 0.14);
+  --mono-shadow: rgba(0, 0, 0, 0.65);
+  --mono-overlay-dark: rgba(0, 0, 0, 0.5);
+  --mono-overlay-mid: rgba(0, 0, 0, 0);
 }
 
 body {
   overflow: hidden;
   font-family: "Roboto", serif;
-  background: linear-gradient(135deg, var(--black-deep), var(--black-mid));
+  background: linear-gradient(135deg, var(--mono-0), var(--mono-2));
 }
 
 .carousel {
@@ -50,8 +52,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   transform-origin: 0% 100%;
-  box-shadow: 0 10px 50px 10px var(--black-shadow);
-  background: var(--black-card);
+  box-shadow: 0 10px 50px 10px var(--mono-shadow);
+  background: var(--mono-1);
   pointer-events: all;
   transform: translate(var(--x), var(--y)) rotate(var(--rot));
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -89,26 +91,26 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    var(--black-overlay-dark),
-    var(--black-overlay-mid) 30%,
-    var(--black-overlay-mid) 50%,
-    var(--black-overlay-dark)
+    var(--mono-overlay-dark),
+    var(--mono-overlay-mid) 30%,
+    var(--mono-overlay-mid) 50%,
+    var(--mono-overlay-dark)
   );
 }
 .carousel-item .title {
   position: absolute;
   z-index: 1;
-  color: var(--black-text);
+  color: var(--mono-9);
   bottom: 20px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
   font-size: clamp(20px, 3vw, 30px);
-  text-shadow: 0 4px 12px var(--black-shadow);
+  text-shadow: 0 4px 12px var(--mono-shadow);
 }
 .carousel-item .num {
   position: absolute;
   z-index: 1;
-  color: var(--black-text);
+  color: var(--mono-9);
   top: 10px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -138,8 +140,8 @@ body {
 .response-btn {
   padding: 12px 24px;
   font-size: 18px;
-  background: var(--black-btn);
-  color: var(--black-text);
+  background: var(--mono-3);
+  color: var(--mono-9);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -150,7 +152,7 @@ body {
 }
 
 .response-btn:hover {
-  background: var(--black-btn-hover);
+  background: var(--mono-4);
   transform: scale(1.1);
 }
 
@@ -171,7 +173,7 @@ body {
   left: 90px;
   width: 10px;
   height: 100%;
-  border: 1px solid var(--black-line);
+  border: 1px solid var(--mono-line);
   border-top: none;
   border-bottom: none;
   opacity: 0.15;
@@ -180,7 +182,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 30px;
-  color: var(--black-text-soft);
+  color: var(--mono-6);
   transform-origin: 0% 10%;
   transform: rotate(-90deg);
   font-size: 9px;
@@ -196,7 +198,7 @@ body {
   right: 28px;
   width: 30px;
   height: 30px;
-  background: var(--black-logo-bg);
+  background: var(--mono-8);
   border-radius: 50%;
   opacity: 0.85;
   display: flex;
@@ -204,7 +206,7 @@ body {
   align-items: center;
   font-family: "Orelo-sw-db", serif;
   pointer-events: all;
-  color: var(--black-logo-fg);
+  color: var(--mono-0);
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
@@ -216,7 +218,7 @@ body {
   z-index: 10;
   bottom: 20px;
   right: 25px;
-  color: var(--black-text-soft);
+  color: var(--mono-6);
   opacity: 0.4;
 }
 .social a {
@@ -224,7 +226,7 @@ body {
   margin-left: 3px;
 }
 .social svg {
-  --fill: var(--black-text-soft);
+  --fill: var(--mono-6);
   width: 35px;
   height: 35px;
 }
@@ -238,7 +240,7 @@ body {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--mono-line);
   margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
   transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
   display: none;
