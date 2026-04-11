@@ -1,25 +1,15 @@
 :root {
-  /* Monochrome scale: black → gray → white */
-  --mono-0: #070707;
-  --mono-1: #0f0f0f;
-  --mono-2: #1a1a1a;
-  --mono-3: #2e2e2e;
-  --mono-4: #454545;
-  --mono-5: #737373;
-  --mono-6: #a3a3a3;
-  --mono-7: #d4d4d4;
-  --mono-8: #ebebeb;
-  --mono-9: #f7f7f7;
-  --mono-line: rgba(255, 255, 255, 0.14);
-  --mono-shadow: rgba(0, 0, 0, 0.65);
-  --mono-overlay-dark: rgba(0, 0, 0, 0.5);
-  --mono-overlay-mid: rgba(0, 0, 0, 0);
+  --green-deep: #0a1612;
+  --green-mid: #0f3d2e;
+  --green-card: #0d1f18;
+  --green-btn: #2d6a4f;
+  --green-btn-hover: #1b4332;
 }
 
 body {
   overflow: hidden;
   font-family: "Roboto", serif;
-  background: linear-gradient(135deg, var(--mono-0), var(--mono-2));
+  background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
 }
 
 .carousel {
@@ -52,8 +42,8 @@ body {
   -ms-user-select: none;
   user-select: none;
   transform-origin: 0% 100%;
-  box-shadow: 0 10px 50px 10px var(--mono-shadow);
-  background: var(--mono-1);
+  box-shadow: 0 10px 50px 10px rgba(0, 0, 0, 0.45);
+  background: var(--green-card);
   pointer-events: all;
   transform: translate(var(--x), var(--y)) rotate(var(--rot));
   transition: transform 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -91,26 +81,26 @@ body {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    var(--mono-overlay-dark),
-    var(--mono-overlay-mid) 30%,
-    var(--mono-overlay-mid) 50%,
-    var(--mono-overlay-dark)
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0) 30%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5)
   );
 }
 .carousel-item .title {
   position: absolute;
   z-index: 1;
-  color: var(--mono-9);
+  color: #fff;
   bottom: 20px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
   font-size: clamp(20px, 3vw, 30px);
-  text-shadow: 0 4px 12px var(--mono-shadow);
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
 .carousel-item .num {
   position: absolute;
   z-index: 1;
-  color: var(--mono-9);
+  color: #fff;
   top: 10px;
   left: 20px;
   transition: opacity 0.8s cubic-bezier(0, 0.02, 0, 1);
@@ -140,19 +130,21 @@ body {
 .response-btn {
   padding: 12px 24px;
   font-size: 18px;
-  background: var(--mono-3);
-  color: var(--mono-9);
+  background: var(--green-btn);
+  color: #fff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.2s ease, background 0.3s ease;
+  transition:
+    transform 0.2s ease,
+    background 0.3s ease;
   width: 200px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 .response-btn:hover {
-  background: var(--mono-4);
+  background: var(--green-btn-hover);
   transform: scale(1.1);
 }
 
@@ -173,7 +165,7 @@ body {
   left: 90px;
   width: 10px;
   height: 100%;
-  border: 1px solid var(--mono-line);
+  border: 1px solid #fff;
   border-top: none;
   border-bottom: none;
   opacity: 0.15;
@@ -182,7 +174,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 30px;
-  color: var(--mono-6);
+  color: #fff;
   transform-origin: 0% 10%;
   transform: rotate(-90deg);
   font-size: 9px;
@@ -198,15 +190,15 @@ body {
   right: 28px;
   width: 30px;
   height: 30px;
-  background: var(--mono-8);
+  background: #fff;
   border-radius: 50%;
-  opacity: 0.85;
+  opacity: 0.5;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Orelo-sw-db", serif;
   pointer-events: all;
-  color: var(--mono-0);
+  color: black;
   text-decoration: none;
   font-size: 20px;
   overflow: hidden;
@@ -218,7 +210,7 @@ body {
   z-index: 10;
   bottom: 20px;
   right: 25px;
-  color: var(--mono-6);
+  color: #fff;
   opacity: 0.4;
 }
 .social a {
@@ -226,7 +218,7 @@ body {
   margin-left: 3px;
 }
 .social svg {
-  --fill: var(--mono-6);
+  --fill: #fff;
   width: 35px;
   height: 35px;
 }
@@ -240,7 +232,7 @@ body {
   width: var(--size);
   height: var(--size);
   border-radius: 50%;
-  border: 1px solid var(--mono-line);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   margin: calc(var(--size) * -0.5) 0 0 calc(var(--size) * -0.5);
   transition: transform 0.85s cubic-bezier(0, 0.02, 0, 1);
   display: none;
